@@ -144,7 +144,7 @@ export default function Home() {
     return (
       <main className="flex min-h-screen items-center justify-center bg-slate-950 px-5 text-slate-100">
         <section className="w-full max-w-md rounded-3xl border border-slate-800 bg-slate-900 p-7 shadow-2xl">
-          <div className="mb-7 text-center"><p className="text-sm font-bold tracking-[0.25em] text-indigo-400">PREPPILOT</p><h1 className="mt-2 text-3xl font-black">Interview prep, engineered.</h1><p className="mt-2 text-sm text-slate-400">Research-driven preparation tailored to the role and company.</p></div>
+          <div className="mb-7 text-center"><p className="text-sm font-bold tracking-[0.25em] text-indigo-400">PREPPILOT</p><h1 className="mt-2 text-3xl font-black">AI-powered Interview Prep. Kit</h1><p className="mt-2 text-sm text-slate-400">Personalized practice. Real interview questions. Smarter preparation.</p></div>
           <div className="mb-5 flex rounded-xl bg-slate-950 p-1"><button onClick={() => setAuthMode('login')} className={`flex-1 rounded-lg px-3 py-2 text-sm font-semibold ${authMode === 'login' ? 'bg-indigo-600 text-white' : 'text-slate-400'}`}>Log in</button><button onClick={() => setAuthMode('register')} className={`flex-1 rounded-lg px-3 py-2 text-sm font-semibold ${authMode === 'register' ? 'bg-indigo-600 text-white' : 'text-slate-400'}`}>Create account</button></div>
           <form onSubmit={handleAuth} className="space-y-4">
             <label className="block text-xs font-semibold text-slate-300">Email<input type="email" required value={authEmail} onChange={(e) => setAuthEmail(e.target.value)} className="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 p-3 text-sm" /></label>
