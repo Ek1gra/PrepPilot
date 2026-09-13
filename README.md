@@ -2,6 +2,24 @@
 
 PrepPilot turns a pasted job description, company URL, and interview timeline into a research-driven interview preparation kit. The implementation follows the Trao Full-Stack Engineering Assessment contract, including Appendix A kit structure and the mandatory Appendix B batch evaluator.
 
+## Live Demo
+
+**Hosted application:** https://preppilot-lac-five.vercel.app
+
+## Highlights
+
+- 🔐 Secure authentication with protected user-owned kits
+- 🔎 Company research with bounded crawling and public interview research
+- 🧠 Multi-stage AI generation with deterministic coverage validation
+- 🎯 Technical, behavioral, system-design and company-fit questions
+- 🔄 Second-pass generation for uncovered requirements
+- ✏️ Editable, reorderable and customizable question bank
+- ♻️ Regeneration that preserves user edits, pins and custom questions
+- 🃏 Flashcards and confidence-based practice
+- 📅 Deterministic preparation schedules for 1–60 days
+- 🛡️ SSRF protection, content limits, validation and structured errors
+
+
 ## Architecture
 
 ```text
@@ -29,7 +47,25 @@ Express API
               ▼
            MongoDB
 ```
+## Project Structure
 
+```text
+PrepPilot/
+├── frontend/              # Next.js + Tailwind UI
+│   ├── app/
+│   └── ...
+├── backend/               # Express + TypeScript API
+│   └── src/
+│       ├── crawler/
+│       ├── config/
+│       ├── middleware/
+│       ├── models/
+│       ├── scheduler/
+│       ├── types/
+│       └── ...
+├── cases.example.json     # Example evaluator input
+└── README.md
+```
 ## Design decisions
 
 ### Authentication and authorization
@@ -117,6 +153,18 @@ npm start
 ```
 
 The production frontend must use HTTPS so the secure HttpOnly session cookie can be used cross-origin.
+## Deployment
+
+| Component | Platform |
+|---|---|
+| Frontend | Vercel |
+| Backend API | Render |
+| Database | MongoDB Atlas |
+| AI | Gemini |
+
+**Live application:** https://preppilot-lac-five.vercel.app
+
+**Repository:** https://github.com/Ek1gra/PrepPilot
 
 ## Mandatory evaluator
 
